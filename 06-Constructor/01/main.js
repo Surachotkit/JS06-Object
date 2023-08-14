@@ -1,28 +1,28 @@
 
 
 
-function Calculator (x,y){
-    this.x = x
-    this.y = y
+function Calculator (){
+  
     this.read = function () {
-        return prompt(this.x)
+        this.x = +prompt("Enter x")
+        this.y = +prompt("Enter y")
+    
     }
-    this.sum = function(){
-        return x+y
-    } 
-    this.mul = function(){
-        return x*y
-    } 
+    this.sum = function () {
+   
+        console.log(this.x + this.y);
+    }
+    this.mul = function (){
+ 
+        console.log(this.x * this.y);
+    }
 }
-        
-// Cal.Cal();
-//   console.log(Cal);
-//   console.log(Cal.sum());
-//   console.log(Cal.mul());
 
-//   alert(Cal.sum());
-//   alert(Cal.mul());
 
-  const number1 = new Calculator("Enter x")
-  const number2 = new Calculator("Enter y")
-  console.log(`x = ${x} y= ${y}`);
+
+    const number = new Calculator()
+    console.log(number);
+    number.read()
+    number.sum()
+    number.mul()
+ 
